@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+    tf2-comp:
+        image: joshdabosh/tf2-docker-comp:latest
+        volumes:
+            - ./maps.txt:/maps.txt
+            - ./cfgs.txt:/cfgs.txt
+        env_file: ./env.list
+        ports:
+            - "${CFG_GAMEPORT}:${CFG_GAMEPORT}"
+            - "${CFG_GAMEPORT}:${CFG_GAMEPORT}/udp"
+            - "${CFG_STVPORT}:${CFG_STVPORT}/udp"
