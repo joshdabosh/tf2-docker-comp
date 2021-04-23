@@ -7,8 +7,8 @@ A Docker image for hosting a competitive Team Fortress 2 server.
 The following will start up a server container with RGL Season 5 6s and Highlander configs and maps, as well as some ultiduo maps / configs.
 
 1. Install `docker` and `docker-compose`
-2. Download and unzip the [example setup](https://github.com/joshdabosh/tf2-docker-comp/raw/master/quickstart/quickstart.zip)
-3. Modify `env.list` to reflect desired values in the [table](#environment-variables)
+2. Download and unzip the [quickstart setup](https://github.com/joshdabosh/tf2-docker-comp/raw/master/quickstart/quickstart.zip)
+3. Modify `.env` to reflect desired values in the [table](#environment-variables) (it's a hidden file)
 4. Run `docker-compose up -d` to start the container in the background
 5. If there is a firewall, make sure to allow both TCP and UDP traffic on the `CFG_GAMEPORT`, and UDP traffic on the `CFG_STVPORT`
 

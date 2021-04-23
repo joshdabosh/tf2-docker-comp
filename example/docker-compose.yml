@@ -5,7 +5,7 @@ services:
         volumes:
             - ./maps.txt:/maps.txt
             - ./cfgs.txt:/cfgs.txt
-        env_file: ./env.list
+        env_file: .env
         ports:
             - "${CFG_GAMEPORT}:${CFG_GAMEPORT}"
             - "${CFG_GAMEPORT}:${CFG_GAMEPORT}/udp"
