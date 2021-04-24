@@ -67,7 +67,7 @@ https://www.ugcleague.com/files/configs/UGC_UD_cfg_v091920.zip
 
 ### anything else
 
-If you want to have greater control over customization, you can just find the running container with `docker container ls` and get a shell on it with `docker exec -it <id> bash`. Then, you can download, delete, or modify anything you want on the filesystem.
+If you want to have greater control over customization, you can attach to the service with `docker-compose exec tf2-comp bash`. Then, you can download, delete, or modify anything you want on the filesystem.
 
 ## Known Issues
 
