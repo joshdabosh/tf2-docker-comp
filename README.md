@@ -23,7 +23,7 @@ Fields with default value `*` represent sensitive information, and thus have no 
 | CFG_DEMOS_PATH       | stv_demos                           | Path to store recorded SourceTV demos                                       |
 | CFG_LOGS             | *                                   | [logs.tf](logs.tf) API key                                                  |
 | CFG_HOSTNAME         | tf2-docker                          | Server hostname                                                             |
-| CFG_MAPSDL           | https:/<span></span>/dl.serveme.tf/ | Host for fast-downloading maps                                              |
+| CFG_MAPSDL           | https:/<span></span>/dl.serveme.tf/maps/ | Host for fast-downloading maps                                              |
 | CFG_MAXPLAYERS       | 24                                  | Maximum number of concurrent players allowed on the server                  |
 | CFG_PASSWORD         | *                                   | Password used to connect to the server in-game                              |
 | CFG_RCON_PASSWORD    | *                                   | RCON password for server administration                                     |
