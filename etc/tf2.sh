@@ -4,6 +4,7 @@ cd ../
 cd hlserver
 
 ./download_new_maps-cfg.sh
+./download_plugins.sh
 
 ./srcds_run -console -game tf +sv_pure 1 -usercon +ip 0.0.0.0 +maxplayers $CFG_MAXPLAYERS +sv_setsteamaccount $CFG_STEAMTOKEN +map $CFG_STARTMAP -port ${CFG_GAMEPORT} +tv_port ${CFG_STVPORT}
 

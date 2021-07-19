@@ -32,9 +32,9 @@ Fields with default value `*` represent sensitive information, and thus have no 
 | CFG_GAMEPORT         | 27015                               | Port for game connections                                                   |
 | CFG_STVPORT          | 27020                               | Port for SourceTV connections                                               |
 
-## Custom Maps and Configs
+## Custom Maps, Configs, and Plugins
 
-You can modify both `maps.txt` and `cfgs.txt` while the container is running and restart the server with a `rcon _restart` the server from the TF2 console to download everything.
+You can modify `maps.txt`, `cfgs.txt`, and `plugins.txt` while the container is running and restart the server with a `rcon _restart` the server from the TF2 console to download everything.
 
 ### maps.txt
 
@@ -65,9 +65,23 @@ https://raw.githubusercontent.com/Stochast1c/cfg/master/esea/esea_base.cfg
 https://www.ugcleague.com/files/configs/UGC_UD_cfg_v091920.zip
 ```
 
+### plugins.txt
+
+Each line is interpreted as a link to a `.smx`. The full URL must be specified.
+
+Ex:
+
+```
+https://github.com/demostf/plugin/raw/master/demostf.smx
+```
+
 ### anything else
 
 If you want to have greater control over customization, you can attach to the service with `docker-compose exec tf2-comp bash`. Then, you can download, delete, or modify anything you want on the filesystem.
+
+## RCON
+
+If you ever need to have direct rcon access instead of connecting from the in-game console, you can do so by directly attaching to the running container ID or name found by running `docker container ls`.
 
 ## Known Issues
 

@@ -5,8 +5,11 @@ services:
         volumes:
             - ./maps.txt:/maps.txt
             - ./cfgs.txt:/cfgs.txt
+            - ./plugins.txt:/plugins.txt
         env_file: .env
         ports:
             - "${CFG_GAMEPORT}:${CFG_GAMEPORT}"
             - "${CFG_GAMEPORT}:${CFG_GAMEPORT}/udp"
             - "${CFG_STVPORT}:${CFG_STVPORT}/udp"
+        stdin_open: true
+        tty: true

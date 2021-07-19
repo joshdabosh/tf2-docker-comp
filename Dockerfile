@@ -61,14 +61,16 @@ RUN wget -qO- https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git974-lin
 # copy over important files
 WORKDIR ${STEAMCMDDIR}/hlserver
 COPY --chown=steam ./etc/curl.ext.so ./tf/addons/sourcemod/extensions/
+
 COPY --chown=steam ./etc/download_default_maps.sh \
                     ./etc/default_maps.txt \
                     ./etc/server.cfg \
                     ./etc/tf2.sh \
                     ./etc/run.sh \
                     ./etc/download_new_maps-cfg.sh \
+                    ./etc/download_plugins.sh \
                     ./
-
+      
 # download some maps
 RUN ./download_default_maps.sh
 
