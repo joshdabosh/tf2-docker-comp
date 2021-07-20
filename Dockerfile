@@ -12,8 +12,8 @@ RUN dpkg --add-architecture i386 \
     && apt-get install -y lib32z1=1:1.2.11.dfsg-2ubuntu1.2 \
         libncurses5:i386=6.2-0ubuntu2 \
         libbz2-1.0:i386=1.0.8-2 \
-        lib32gcc1=1:10.3.0-5ubuntu1~20.04 \
-        lib32stdc++6=10.3.0-5ubuntu1~20.04 \
+        lib32gcc1 \
+        lib32stdc++6 \
         libtinfo5:i386=6.2-0ubuntu2 \
         libcurl3-gnutls:i386=7.68.0-1ubuntu2.5 \
         wget=1.20.3-1ubuntu1 \
