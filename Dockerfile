@@ -39,7 +39,7 @@ RUN wget -qO- https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.ta
 WORKDIR ${STEAMCMDDIR}/hlserver/tf
 
 RUN wget -qO- https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git974-linux.tar.gz | tar zxf - \
-    && wget -qO- http://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6502-linux.tar.gz | tar zxf - \
+    && wget -qO- http://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6512-linux.tar.gz | tar zxf - \
     && wget -q https://github.com/sapphonie/MGEMod/archive/master.zip \
         && unzip -q master.zip \
         && cp -rf MGEMod-master/addons/* addons/ \
