@@ -9,17 +9,17 @@ ENV STEAMCMDDIR "${HOMEDIR}/steamcmd"
 # baseline system configuration
 RUN dpkg --add-architecture i386 \
     && apt-get update -y \
-    && apt-get install -y lib32z1=1:1.2.11.dfsg-2ubuntu1.2 \
-        libncurses5:i386=6.2-0ubuntu2 \
-        libbz2-1.0:i386=1.0.8-2 \
+    && apt-get install -y lib32z1 \
+        libncurses5:i386 \
+        libbz2-1.0:i386 \
         lib32gcc1 \
         lib32stdc++6 \
-        libtinfo5:i386=6.2-0ubuntu2 \
-        libcurl3-gnutls:i386=7.68.0-1ubuntu2.5 \
-        wget=1.20.3-1ubuntu1 \
-        locales=2.31-0ubuntu9.2 \
-        unzip=6.0-25ubuntu1 \
-        gettext-base=0.19.8.1-10build1 \
+        libtinfo5:i386 \
+        libcurl3-gnutls:i386 \
+        wget \
+        locales \
+        unzip \
+        gettext-base \
     && sed -i -e 's/# en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen \
     && dpkg-reconfigure --frontend=noninteractive locales \
     && useradd -u ${PUID} -m ${USER} \
